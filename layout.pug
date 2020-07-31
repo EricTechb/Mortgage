@@ -1,0 +1,27 @@
+doctype html
+html
+    head
+        title #{title} Audio recognition 
+        link(rel='stylesheet', href='/css/main.css')
+        //link(rel="stylesheet", href="/css/question.css")
+        //link(rel='shortcut icon', href="/images/thought.png", type="image/x-icon")
+        //link(href="https://fonts.googleapis.com/css?family=Arizonia|Mr+Dafoe" rel="stylesheet")
+    body
+        main.main    
+            block header
+                nav.navbar
+                    a(href="/").logo-link
+                        //img.logo(src="/images/thought.png" alt="Logo image")
+                        h1.audio Audio
+                    .menu
+                            a.link(href="/login") Login
+                            a.link(href="/register") Sign Up
+                        
+            block errors
+                if errors
+                    .errors-container
+                        each error in errors
+                            //.error-message #{error}
+                        
+            block content
+        a.credits(href="/credits") Credits
